@@ -9,7 +9,7 @@ const config = {
   title: 'Waurum',
   tagline: 'Official documentation platform for Waurum',
   url: 'https://waurum-studio.github.io',
-  baseUrl: '/',
+  baseUrl: '/waurum-documentation/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
