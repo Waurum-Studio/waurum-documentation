@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwaurum_docstaff=self.webpackChunkwaurum_docstaff||[]).push([[99],{380:a=>{a.exports=JSON.parse('{"label":"hello","permalink":"/fr/blog/tags/hello","allTagsPath":"/fr/blog/tags","count":2}')}}]);
