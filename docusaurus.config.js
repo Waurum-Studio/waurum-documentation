@@ -81,6 +81,10 @@ const config = {
             position: 'right',
           },
           {
+            type: 'docsVersionDropdown',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/Waurum-Studio/waurum-documentation',
             label: 'GitHub',
             position: 'right',
