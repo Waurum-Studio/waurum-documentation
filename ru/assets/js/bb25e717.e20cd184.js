@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwaurum_docstaff=self.webpackChunkwaurum_docstaff||[]).push([[3319],{5848:a=>{a.exports=JSON.parse('{"permalink":"/waurum-documentation/ru/blog/tags/hola","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
