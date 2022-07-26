@@ -1,0 +1,134 @@
+---
+sidebar-position: 3
+---
+
+# 🔨 Optimizing your game
+
+**Having FPS drops or stutters?**  
+Bellow tips should help you optimize a bit your game.
+
+export const Highlight = ({children, color}) => (
+  <b style={{ display: 'inline-block', color: color }}> {children} </b>
+);
+
+
+---
+
+## Switch to Chromium branch
+
+:::tip What is Chromium?
+**Chromium is an alternative branch** of Garry's mod that features an **improved HTML engine** but also **latest updates**.  
+It is known to bring a **performance boost** at the cost of really rare crashs due to its **experimental** aspect.  
+**Most players and developers use it instead of the default branch of the game.** 
+:::
+
+### Change of branch
+1. **Open Steam**, go in your **library** and **click on Garry's mod**
+2. Hit the **Cog button** *(Manage)* and click on ``Properties...``
+![Manage button](https://imgur.com/S470CzY.png)
+3. Go in **BETAS** tab in the opened window
+4. In the **Beta dropdown**, select ``x86-x64 - Chromium + 64-bit binaries`` version
+![Betas Tab](https://imgur.com/MCot4He.png)
+5. Once download is over *(~150Mo)*, you're done!
+
+Now when you launch your game, you'll be **prompt a Version popup**.  
+**Select the ``64-bit`` one** and click **Play** to launch Garry's mod.  
+![Version prompt](https://imgur.com/wC9EUDj.png)
+
+:::info Rollback to default branch
+**Tired of using Chromium or having issues?**  
+You can go back to the default branch by selecting ``None`` **in Beta dropdown at Step 4 of [above tutorial](#change-of-branch)**.
+:::
+
+## In-depth adjustements
+
+:::caution Disclaimer 
+Bellow tips **won't necessarily work** or share the **same results** for everyone as it depends of **your configuration**.  
+Keep in mind that **you must follow given steps correctly** in order to not break your game instance.
+:::
+
+### Edit game properties
+:::danger Path accuracy
+Paths / locations that are given bellow can **vary based on where your Steam and Garry's mod installations are**.
+:::
+- Find ``hl2.exe`` and open the **Properties** *(right-click on it)*
+> *Can usually be found in `C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\`*
+- In **Compatibility** tab, toggle the ``Disable fullscreen optimizations`` option
+- Click on **Change high DPI settings** and then toggle ``Override high DPI scaling behavior`` by **Application**
+- Search for ``gmod.exe`` and **repeat above steps**
+> *Can usually be found in `C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\`*
+
+### Video settings
+:::note Legend
+- <Highlight color="#32a852">Average / Good computer</Highlight> recommendations<br/>
+- <Highlight color="#e6b749">Low-end device</Highlight> recommendations
+:::
+
+You'll need to hit the lower right Advanced button in Video tab to access the following settings:
+- **Model Detail** - <Highlight color="#32a852">High</Highlight> / <Highlight color="#e6b749">Medium-Low</Highlight>
+> *Note that some addons can break if you're not using the High setting*
+- **Texture Detail** - <Highlight color="#32a852">High</Highlight> / <Highlight color="#e6b749">Medium-Low</Highlight>
+> *Very high isn't useful and can eat your FPS on a huge server such as a Roleplay one*
+- **Shader Detail** - <Highlight color="#32a852">High</Highlight> / <Highlight color="#e6b749">Low</Highlight>
+- **Water Detail** - <Highlight color="#32a852">Reflect All</Highlight> / <Highlight color="#e6b749">Reflect World-Simple Reflections</Highlight>
+- **Shadow Detail** - <Highlight color="#32a852">High</Highlight> / <Highlight color="#e6b749">Low</Highlight>
+> *Low option disables shadows*
+- **Color Correction** - <Highlight color="#32a852">Enabled</Highlight> / <Highlight color="#e6b749">Disabled</Highlight>
+- **Anti-Aliasing** - <Highlight color="#32a852">4x MSAA</Highlight> / <Highlight color="#e6b749">2x-None</Highlight>
+> *8x MSAA is way too much and usually not needed*
+- **Filtering Mode** - <Highlight color="#32a852">16x</Highlight> / <Highlight color="#e6b749">Lower than 16x</Highlight>
+- **Wait for vertical sync** - <Highlight color="#32a852">Off</Highlight> / <Highlight color="#e6b749">Off</Highlight>
+- **Motion Blur** - <Highlight color="#32a852">Off</Highlight> / <Highlight color="#e6b749">Off</Highlight>
+> *Unneeded and can make maps harder to read*
+- **Field of View** - <Highlight color="#32a852">90-100</Highlight> / <Highlight color="#e6b749">90-100</Highlight>
+- **Multicore Rendering** - <Highlight color="#32a852">On</Highlight> / <Highlight color="#e6b749">On</Highlight>
+> *It won't really enable it, follow [this tutorial](#launch-options) to force enable Multicore Rendering*
+- **High Dynamic Range** - <Highlight color="#32a852">Full</Highlight> / <Highlight color="#e6b749">Full</Highlight>
+> *Needed by some maps, go lower if your computer suffers*
+
+### Launch options
+:::danger Disclaimer
+**This is the most "technical" part of this tutorial**, but if you follow steps correctly, it should be okay.  
+As mentionned above, some settings aren't really applied on each game launch so we'll **force the game to read and execute our optimal parameters**.
+:::
+
+1. Locate your **Garry's mod local files**
+> *In your Steam library, go to ``Manage / Properties / Local files / Browse Local Files``*
+2. **Go in** ``garrysmod/cfg`` folder
+3. **Open** ``autoexec.cfg`` file with a text editor *(Notepad, Notepad++, Sublime text, etc..)*
+> *If file doesn't exist for whatever reason, create it*
+4. **Copy the following code block** and **paste it** into the ``autoexec.cfg`` file
+```lua
+// Multi-core rendering settings
+// highlight-start
+gmod_mcore_test 1
+mat_queue_mode 2
+cl_threaded_bone_setup 1
+cl_threaded_client_leaf_system 1
+r_threaded_client_shadow_manager 1
+r_threaded_particles 1
+r_threaded_renderables 1
+r_queued_ropes 1
+studio_queue_mode 1
+mat_specular 1
+// highlight-end
+
+// Change "999" to the # of your refresh rate if you're on a laptop
+// highlight-next-line
+fps_max 999 
+// Deletes unsubscribed addons
+// highlight-next-line
+menu_cleanupgmas 
+// Saves settings to config.cfg
+// highlight-next-line
+host_writeconfig 
+```
+5. **Save changes** and go back to your **Properties** menu
+6. Go in **Set Launch Options** and paste the following command
+> ``+exec autoexec.cfg``
+
+#### Let's go, your game should now be way smoother than before!
+
+:::tip Credits
+**Parts of this page have been realized using [this Steam guide](https://steamcommunity.com/sharedfiles/filedetails/?id=1911349076)**, check it out!
+:::
