@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwaurum_docstaff=self.webpackChunkwaurum_docstaff||[]).push([[81],{2531:a=>{a.exports=JSON.parse('{"permalink":"/waurum-documentation/fr/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

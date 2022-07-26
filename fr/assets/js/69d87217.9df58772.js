@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwaurum_docstaff=self.webpackChunkwaurum_docstaff||[]).push([[7389],{6673:a=>{a.exports=JSON.parse('{"label":"facebook","permalink":"/waurum-documentation/fr/blog/tags/facebook","allTagsPath":"/waurum-documentation/fr/blog/tags","count":1}')}}]);
