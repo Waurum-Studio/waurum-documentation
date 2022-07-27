@@ -91,41 +91,53 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Waurum Documentation',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Introduction',
                 to: '/docs/intro',
               },
+              {
+                label: "Garry's mod",
+                to: '/docs/category/-gmod---getting-started',
+              },
+              {
+                label: 'Contribute',
+                to: '/docs/not-existing',
+              }
             ],
           },
           {
-            title: 'Community',
+            title: 'Waurum Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Our Website',
+                href: 'https://waurum.net',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Our Discord',
+                href: 'https://discord.gg/waurum',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Our Steam',
+                href: 'https://steamcommunity.com/groups/waurum',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'I want more !!',
             items: [
               {
-                label: 'Blog',
+                label: 'Our Blog (WIP)',
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Our GitHub',
+                href: 'https://github.com/Waurum-Studio',
+              },
+              {
+                label: 'By dotCore',
+                href: 'https://github.com/dotCore-off',
               },
             ],
           },
