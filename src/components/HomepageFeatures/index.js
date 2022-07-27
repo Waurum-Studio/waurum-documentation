@@ -8,28 +8,28 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Thanks to <a href="https://docusaurus.io">Docusaurus</a> sleek design, navigating through knowledge has never been that easy.<br/>
+        Oh and we also worked, a bit 🥲
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Work in Progress',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Documentation is being built block by block with the help of generous contributors.<br/>
+        <a href="#">Join the brotherhood of compulsive writers now!</a>
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Localization Support',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Image sucks, but <a href="#">cool translators</a> are on their way to make your best wish come true: <br/>
+        read technical shits in your own language ❤️
       </>
     ),
   },
