@@ -1,0 +1,80 @@
+---
+sidebar_position: 2
+---
+
+# 🟪 Monter le contenu CSS
+
+**Erreurs de map ou textures manquantes?**  
+Suis les étapes ci-dessous pour corriger le problème.
+
+---
+
+## Sans Counter-Strike Source
+
+:::info
+**Passe à la [prochaine section](#with-counter-strike-source)** si tu **possèdes déjà le jeu [Counter-Strike Source](https://store.steampowered.com/app/240/CounterStrike_Source/)**.
+:::
+
+### Pré-requis
+- [ ] Garry's Mod doit être **installé**
+- [ ] [WinRAR](https://www.win-rar.com/start.html?&L=10) ou n'importe quel logiciel qui **peut extraire des archives ZIP / RAR**
+
+### Version Vidéo
+https://youtu.be/8AfuNpX8RQA?t=154
+
+### Version Textuelle
+1. Trouve un bon site pour **télécharger le contenu CSS**
+> *Nous recommandons [celui-ci](https://gmodcontent.com/)*
+2. **Extrais le contenu dans un nouveau dossier** nommé `csscontent` par exemple
+
+```text
+Tu devrais avoir à peu près cette arborescence: 
+
+csscontent (dépend du nom que tu as donné)
+├── materials
+├── models
+├── particles
+└── sound
+```
+
+3. **Trouve l'emplacement du dossier addons de Garry's mod** sur ton ordinateur
+> *Le chemin habituel est `C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons`*
+
+:::danger Emplacement du dossier
+Note que **l'emplacement peut varier** suivant là où les jeux et Steam **sont installés** sur ton ordinateur.
+:::
+
+4. **Déplace** le dossier `csscontent` dans ton dossier `addons`
+```text
+Tu devrais avoir cette arborescence: 
+
+addons
+└── csscontent (dépend du nom que tu as donné)
+    ├── materials
+    ├── models
+    ├── particles
+    └── sound
+```
+
+5. **Redémarre ou démarre ton jeu et le problème devrait être réglé!**
+
+## Avec Counter-Strike Source
+
+:::info
+Garry's mod **monte automatiquement le contenu CSS** s'il détecte que **Counter-Strike Source est installé**.  
+Les étapes suivantes sont à suivre si tu veux **manuellement monter le contenu**.
+:::
+
+### Pré-requis
+- [ ] Garry's Mod et Counter-Strike Source **doivent être installé**
+- [ ] Garry's Mod doit **pouvoir accéder au dossier de Counter-Strike Source**
+
+### Version Vidéo
+https://youtu.be/8AfuNpX8RQA?t=130
+
+### Version Textuelle
+1. **Démarre Garry's Mod**
+2. Dans le **menu principal**, va **en bas à droite** et **clique sur le bouton Parties**
+> *Il devrait avoir l'icône 🎮*
+3. **Vérifie** que Counter-Strike source est ✅, sinon **coche le**
+4. **Le contenu CSS devrait être monté!**
