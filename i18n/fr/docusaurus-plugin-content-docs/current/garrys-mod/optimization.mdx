@@ -40,66 +40,66 @@ Désormais quand tu lanceras le jeu, tu verras **une pop-up de choix de version*
 Tu peux revenir à la branche par défaut en sélectionnant ``None`` **dans la liste des Bêtas à l'étape 4 du [tutoriel ci-dessus](#changer-de-branche)**.
 :::
 
-## In-depth adjustements
+## Ajustements avancés
 
-:::caution Disclaimer 
-Bellow tips **won't necessarily work** or share the **same results** for everyone as it depends of **your configuration**.  
-Keep in mind that **you must follow given steps correctly** in order to not break your game instance.
+:::caution Avertissement 
+Les astuces ci-dessous **ne marchent pas** ou tu n'obtiendras pas nécessairement **les mêmes résultats**  vu que ça dépend de **ta configuration**.  
+Garde en tête que **tu dois suivre les instructions correctement** pour ne pas casser ton jeu.
 :::
 
-### Edit game properties
-:::danger Path accuracy
-Paths / locations that are given bellow can **vary based on where your Steam and Garry's mod installations are**.
+### Modifier les propriétés du jeu
+:::danger Précision du chemin
+Les emplacements donnés peuvent **varier suivant l'endroit où tu as installé Steam et Garry's mod**.
 :::
-- Find ``hl2.exe`` and open the **Properties** *(right-click on it)*
-> *Can usually be found in `C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\`*
-- In **Compatibility** tab, toggle the ``Disable fullscreen optimizations`` option
-- Click on **Change high DPI settings** and then toggle ``Override high DPI scaling behavior`` by **Application**
-- Search for ``gmod.exe`` and **repeat above steps**
-> *Can usually be found in `C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\`*
+- Trouve ``hl2.exe`` et ouvre les **Propriétés** *(clique droit)*
+> *Trouvable normalement dans `C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\`*
+- Dans l'onglet **Compatibilité**, coche l'option ``Désactiver les optimisations du mode plein écran``
+- Clique sur **Modifier les paramètres PPP élevés** et active le ``Remplacement du comportement de mise à l'échelle`` par **Application**
+- Cherche ``gmod.exe`` et **répète les étapes précédentes**
+> *Trouvable normalement dans `C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\`*
 
-### Video settings
-:::note Legend
-- <Highlight color="#32a852">Average / Good computer</Highlight> recommendations<br/>
-- <Highlight color="#e6b749">Low-end device</Highlight> recommendations
+### Paramètres vidéo
+:::note Légende
+- Recommendations pour un <Highlight color="#32a852">PC moyen / haut de gamme</Highlight> <br/>
+- Recommendations pour un <Highlight color="#e6b749">PC faible</Highlight>
 :::
 
-You'll need to hit the lower right Advanced button in Video tab to access the following settings:
-- **Model Detail** - <Highlight color="#32a852">High</Highlight> / <Highlight color="#e6b749">Medium-Low</Highlight>
-> *Note that some addons can break if you're not using the High setting*
-- **Texture Detail** - <Highlight color="#32a852">High</Highlight> / <Highlight color="#e6b749">Medium-Low</Highlight>
-> *Very high isn't useful and can eat your FPS on a huge server such as a Roleplay one*
-- **Shader Detail** - <Highlight color="#32a852">High</Highlight> / <Highlight color="#e6b749">Low</Highlight>
-- **Water Detail** - <Highlight color="#32a852">Reflect All</Highlight> / <Highlight color="#e6b749">Reflect World-Simple Reflections</Highlight>
-- **Shadow Detail** - <Highlight color="#32a852">High</Highlight> / <Highlight color="#e6b749">Low</Highlight>
-> *Low option disables shadows*
-- **Color Correction** - <Highlight color="#32a852">Enabled</Highlight> / <Highlight color="#e6b749">Disabled</Highlight>
+Tu devras cliquer sur le bouton **Avancées** dans l'onglet **Vidéo de tes paramètres Garry's mod**:
+- **Détail des modèles** - <Highlight color="#32a852">Élevé</Highlight> / <Highlight color="#e6b749">Moyen-Bas</Highlight>
+> *Note que certains addons ne marcheront pas si tu n'utilises pas Élevé*
+- **Détail des textures** - <Highlight color="#32a852">Élevé</Highlight> / <Highlight color="#e6b749">Moyen-Bas</Highlight>
+> *Très élevé n'est pas utile et bouffe tes FPS sur des gros serveurs comme les RP*
+- **Détail des shaders** - <Highlight color="#32a852">Élevé</Highlight> / <Highlight color="#e6b749">Bas</Highlight>
+- **Détail de l'eau** - <Highlight color="#32a852">Tout réfléchir</Highlight> / <Highlight color="#e6b749">Réfléchir le monde-Simple Réflections</Highlight>
+- **Détail des ombres** - <Highlight color="#32a852">Élevé</Highlight> / <Highlight color="#e6b749">Bas</Highlight>
+> *L'option bas désactive les ombres*
+- **Correction des couleurs** - <Highlight color="#32a852">Activée</Highlight> / <Highlight color="#e6b749">Désactivée</Highlight>
 - **Anti-Aliasing** - <Highlight color="#32a852">4x MSAA</Highlight> / <Highlight color="#e6b749">2x-None</Highlight>
-> *8x MSAA is way too much and usually not needed*
-- **Filtering Mode** - <Highlight color="#32a852">16x</Highlight> / <Highlight color="#e6b749">Lower than 16x</Highlight>
-- **Wait for vertical sync** - <Highlight color="#32a852">Off</Highlight> / <Highlight color="#e6b749">Off</Highlight>
-- **Motion Blur** - <Highlight color="#32a852">Off</Highlight> / <Highlight color="#e6b749">Off</Highlight>
-> *Unneeded and can make maps harder to read*
-- **Field of View** - <Highlight color="#32a852">90-100</Highlight> / <Highlight color="#e6b749">90-100</Highlight>
-- **Multicore Rendering** - <Highlight color="#32a852">On</Highlight> / <Highlight color="#e6b749">On</Highlight>
-> *It won't really enable it, follow [this tutorial](#launch-options) to force enable Multicore Rendering*
+> *8x MSAA n'est pas utile et beaucoup trop*
+- **Mode de filtrage** - <Highlight color="#32a852">16x</Highlight> / <Highlight color="#e6b749">Inférieur à 16x</Highlight>
+- **Attendre la synchro verticale** - <Highlight color="#32a852">Off</Highlight> / <Highlight color="#e6b749">Off</Highlight>
+- **Flou de mouvement** - <Highlight color="#32a852">Off</Highlight> / <Highlight color="#e6b749">Off</Highlight>
+> *Inutile et peu rendre certaines maps illisibles*
+- **Champ de vision** - <Highlight color="#32a852">90-100</Highlight> / <Highlight color="#e6b749">90-100</Highlight>
+- **Rendu Multi-coeur** - <Highlight color="#32a852">On</Highlight> / <Highlight color="#e6b749">On</Highlight>
+> *Cela ne l'activera pas réellement, suis [ce tutoriel](#options-de-lancement) pour forcer l'activation*
 - **High Dynamic Range** - <Highlight color="#32a852">Full</Highlight> / <Highlight color="#e6b749">Full</Highlight>
-> *Needed by some maps, go lower if your computer suffers*
+> *Requis par certaines maps, désactive si ton PC souffre trop*
 
-### Launch options
-:::danger Disclaimer
-**This is the most "technical" part of this tutorial**, but if you follow steps correctly, it should be okay.  
-As mentionned above, some settings aren't really applied on each game launch so we'll **force the game to read and execute our optimal parameters**.
+### Options de lancement
+:::danger Avertissement
+**C'est la partie la plus "technique" de ce tutoriel**, mais si tu suis correctement, ça devrait bien se passer. :)    
+Comme mentionné plus haut, certains paramètres ne sont pas appliqués lors du lancement du jeu donc nous allons **le forcer à les lire et à les exécuter**.
 :::
 
-1. Locate your **Garry's mod local files**
-> *In your Steam library, go to ``Manage / Properties / Local files / Browse Local Files``*
-2. **Go in** ``garrysmod/cfg`` folder
-3. **Open** ``autoexec.cfg`` file with a text editor *(Notepad, Notepad++, Sublime text, etc..)*
-> *If file doesn't exist for whatever reason, create it*
-4. **Copy the following code block** and **paste it** into the ``autoexec.cfg`` file
+1. Localise les **fichiers locaux de ton Garry's mod**
+> *Dans ta bibliothèque Steam, va dans ``Gérer / Propriétés / Fichiers locaux / Parcourir les fichiers locaux``*
+2. **Rend toi** dans le dossier ``garrysmod/cfg``
+3. **Ouvre** le fichier ``autoexec.cfg`` avec un éditeur de texte *(Notepad, Notepad++, Sublime text, etc..)*
+> *Si le fichier n'existe pas, créé le*
+4. **Copie le bloc de code suivant** et **colle le** dans le fichier ``autoexec.cfg``
 ```lua
-// Multi-core rendering settings
+// Paramètres du rendu multi-coeur
 // highlight-start
 gmod_mcore_test 1
 mat_queue_mode 2
@@ -113,22 +113,22 @@ studio_queue_mode 1
 mat_specular 1
 // highlight-end
 
-// Change "999" to the # of your refresh rate if you're on a laptop
+// Change le "999" par le taux de rafraichissement de ton écran
 // highlight-next-line
 fps_max 999 
-// Deletes unsubscribed addons
+// Supprime les addons auxquels tu n'es plus abonné
 // highlight-next-line
 menu_cleanupgmas 
-// Saves settings to config.cfg
+// Sauvegarder les paramètres dans config.cfg
 // highlight-next-line
 host_writeconfig 
 ```
-5. **Save changes** and go back to your **Properties** menu
-6. Go in **Set Launch Options** and paste the following command
+5. **Sauvegarde les changements** et retourne dans le menu **Propriétés** de Steam
+6. Dans le champ **Définir les options de lancement**, écris la commande suivante
 > ``+exec autoexec.cfg``
 
-#### Let's go, your game should now be way smoother than before!
+#### C'est terminé, ton jeu devrait être beaucoup plus fluide maintenant!
 
-:::tip Credits
-**Parts of this page have been realized using [this Steam guide](https://steamcommunity.com/sharedfiles/filedetails/?id=1911349076)**, check it out!
+:::tip Crédits
+**Des parties de cette page ont été réalisées grâce [à ce guide Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1911349076)**, regarde le!
 :::
